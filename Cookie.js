@@ -18,3 +18,9 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
 
     numbers.innerHTML = num; // Det er denne del som gør at man kan se selve tallet på HTML filen.
 }
+
+function Upgrade(){
+    if (num > 50){
+        promt("Du har ikke nok points")
+    }
+}
