@@ -22,7 +22,7 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
 
 function Upgrade(){
     if (num < 50){
-        promt("Du har købt en upgrade")
+        console.log("Du har købt en upgrade")
         num -= 50
     }
 }
