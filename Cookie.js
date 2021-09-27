@@ -1,3 +1,4 @@
+// Det meste er koden er blevet lånt fra https://codepen.io/marisdu/pen/ZJKzRG
 var num = 0; // Ens starter værdi
 
 var cookie = document.getElementById("cookie");
@@ -20,7 +21,8 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
 }
 
 function Upgrade(){
-    if (num > 50){
-        promt("Du har ikke nok points")
+    if (num < 50){
+        promt("Du har købt en upgrade")
+        num -= 50
     }
 }
