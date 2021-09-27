@@ -1,6 +1,6 @@
 // Det meste er koden er blevet lånt fra https://codepen.io/marisdu/pen/ZJKzRG
 var num = 0; // Ens starter værdi
-
+var level = 0;
 var cookie = document.getElementById("cookie");
 
 window.onload = function () { // er en del af koden som tvinger en til at skrive noget når spillet loader
@@ -12,7 +12,7 @@ window.onload = function () { // er en del af koden som tvinger en til at skrive
 }
 
 function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang der bliver trykket på cookien.
-    num += 1; // Værdien af points man får per click.
+    num += 1 + level; // Værdien af points man får per click.
     console.log("You Clicked");
 
    var numbers = document.getElementById("numbers");
@@ -22,7 +22,8 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
 
 function Upgrade(){
     if (num < 50){
-        console.log("Du har købt en upgrade")
-        num -= 50
+        console.log("Du har købt en upgrade");
+       level++;
+       numbers.innerHTML = num - 50;
     }
 }
