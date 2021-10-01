@@ -33,8 +33,8 @@ function Upgrade(){
     }
 }
 
-function Upgrade500(){
-    if (num > 500){// Her tjekker den om du har over 49 points
+function UpgradeTwo(){
+    if (num > 499){// Her tjekker den om du har over 49 points
         console.log("Du har købt en upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
        level + 50; // plus i level så man få flere points pr click
        num -= 500 // fjerner 50 fra din points,
