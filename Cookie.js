@@ -21,12 +21,13 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
 }
 
 function Upgrade(){
-    if (num > 49){// Her tjekker den om du har over 49 points
+    if (num > 50){// Her tjekker den om du har over 49 points
         console.log("Du har købt en upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
        level++; // plus i level så man få flere points pr click
-       num -= 50 // fjerner 50 fra din points,
+       num -= 50; // fjerner 50 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 50
-       alert("You have upgraded")
+       upgradeLevel.innerHTML = level + 1; // denne del af koden viser hvor mange points man får pr click
+       alert("You have upgraded");
     }
     else {
         console.log("Du har ikke nok points")
@@ -34,12 +35,13 @@ function Upgrade(){
 }
 
 function UpgradeTwo(){
-    if (num > 499){// Her tjekker den om du har over 500 points
+    if (num > 999){// Her tjekker den om du har over 999 points
         console.log("Du har købt en stor upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
-       level += 75; // plus i level så man få flere points pr click
-       num -= 500 // fjerner 500 fra din points,
+        upgradeLevel.innerHTML = level + 100; // Denne del i koden viser hvor mange points man får per click
+        level += 100; // plus i level så man få flere points pr click
+       num -= 999; // fjerner 500 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 500
-       alert("You have upgraded 75 points")
+       alert("You have upgraded 100 points")
     }
     else {
         console.log("Du har ikke nok points")
