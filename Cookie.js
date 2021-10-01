@@ -35,11 +35,11 @@ function Upgrade(){
 }
 
 function UpgradeTwo(){
-    if (num > 999){// Her tjekker den om du har over 999 points
+    if (num > 2499){// Her tjekker den om du har over 999 points
         console.log("Du har købt en stor upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
-        upgradeLevel.innerHTML = level + 100; // Denne del i koden viser hvor mange points man får per click
-        level += 100; // plus i level så man få flere points pr click
-       num -= 999; // fjerner 500 fra din points,
+        upgradeLevel.innerHTML = level + 50; // Denne del i koden viser hvor mange points man får per click
+        level += 50; // plus i level så man få flere points pr click
+       num -= 2500; // fjerner 500 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 500
        alert("You have upgraded 100 points")
     }
