@@ -35,13 +35,27 @@ function Upgrade(){
 }
 
 function UpgradeTwo(){
-    if (num > 2499){// Her tjekker den om du har over 999 points
+    if (num > 4999){// Her tjekker den om du har over 999 points
         console.log("Du har købt en stor upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
         upgradeLevel.innerHTML = level + 50; // Denne del i koden viser hvor mange points man får per click
         level += 50; // plus i level så man få flere points pr click
-       num -= 2500; // fjerner 500 fra din points,
+       num -= 4999; // fjerner 500 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 500
        alert("You have upgraded 100 points")
+    }
+    else {
+        console.log("Du har ikke nok points")
+    }
+}
+
+function UpgradeThree(){
+    if (num > 24999){
+        console.log("du har købt den sidste upgrade");
+        upgradeLevel.innerHTML = level + 500;
+        level += 500
+        num -= 24999
+        numbers.innerHTML = num;
+        alert("du har nu klaret spillet")
     }
     else {
         console.log("Du har ikke nok points")
