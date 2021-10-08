@@ -5,7 +5,7 @@ var cookie = document.getElementById("cookie");
 
 window.onload = function () { // er en del af koden som tvinger en til at skrive noget når spillet loader
     var name = prompt("What is your name"); // spør om navnet på din buisness
-    var Buisness = prompt("What type of buisness are you running?") // spørger om hvilken type buisness det er, ville gerne have billdet ville ændre sig
+    var Buisness = prompt("What type of buisness are you running?") // spørger om hvilken type buisness det er, ville gerne have billdet ville ændre sig/ standard her ville nok være et bakery.
     var space = document.getElementById("space"); // kalder "space" fra HTML hvor at navnet skal stå
     
     space.innerHTML = name + "'s" + " " +Buisness; // Ligger combinationen af navne sammen.
@@ -39,7 +39,7 @@ function UpgradeTwo(){
         console.log("Du har købt en stor upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
         upgradeLevel.innerHTML = level + 50; // Denne del i koden viser hvor mange points man får per click
         level += 50; // plus i level så man få flere points pr click
-       num -= 4999; // fjerner 500 fra din points,
+       num -= 5000; // fjerner 500 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 500
        alert("You have upgraded 100 points")
     }
@@ -53,7 +53,7 @@ function UpgradeThree(){
         console.log("du har købt den sidste upgrade");
         upgradeLevel.innerHTML = level + 500;
         level += 500
-        num -= 24999
+        num -= 25000
         numbers.innerHTML = num;
         alert("du har nu klaret spillet")
     }

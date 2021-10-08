@@ -1,7 +1,7 @@
 body {
     padding-top: 30px;
     font-family: Arial;
-    background-color: turquoise;
+    background-color: rgb(155, 70, 13);
     width: 500px;
     margin: auto;
     text-align: center;
@@ -22,7 +22,7 @@ p {
     font-size: 30px;
     border:5px solid;
     border-radius:10px;
-    background-color: greenyellow;
+    background-color: rgb(212, 189, 54);
     color: white;
     width:389px;
     height:60px;
