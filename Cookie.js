@@ -41,7 +41,7 @@ function UpgradeTwo(){
         level += 50; // plus i level så man få flere points pr click
        num -= 5000; // fjerner 500 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 500
-       alert("You have upgraded 100 points")
+       alert("You have upgraded 50 points") 
     }
     else {
         console.log("Du har ikke nok points")
@@ -49,12 +49,12 @@ function UpgradeTwo(){
 }
 
 function UpgradeThree(){
-    if (num > 24999){
+    if (num > 24999){ // tjek om 25k
         console.log("du har købt den sidste upgrade");
-        upgradeLevel.innerHTML = level + 500;
-        level += 500
-        num -= 25000
-        numbers.innerHTML = num;
+        upgradeLevel.innerHTML = level + 500; // adder 500 til den del af koden som viser points pr click
+        level += 500 // viser point i click 
+        num -= 25000 // fjerner dine points
+        numbers.innerHTML = num; // går at du kan se du har fået fjernet 25k
         alert("du har nu klaret spillet")
     }
     else {
