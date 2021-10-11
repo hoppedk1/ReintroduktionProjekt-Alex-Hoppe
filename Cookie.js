@@ -2,6 +2,8 @@
 var num = 0; // Ens starter værdi
 var level = 1; // Start click værdi
 var StrongerClickerPrice = 50; //Her sætter vi prisen
+var BoosterPrice = 5000;
+var SpecialPowderPrice = 25000;
 
 var cookie = document.getElementById("cookie");
 
@@ -23,13 +25,12 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
 }
 
 function Upgrade(){
-debugger
     if (num >= StrongerClickerPrice){// Her tjekker den om du har over 49 points
         console.log("Du har købt en upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
        level += 1; // plus i level så man få flere points pr click
        num -= 50; // fjerner 50 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 50
-       StrongerClickerPrice = StrongerClickerPrice*2;
+       StrongerClickerPrice = StrongerClickerPrice*1.1;
        upgradeLevel.innerHTML = level; // denne del af koden viser hvor mange points man får pr click
        alert("You have upgraded");
     }
@@ -39,7 +40,6 @@ debugger
 }
 
 function UpgradeTwo(){
-    var BoosterPrice = 5000;
     if (num >= BoosterPrice){// Her tjekker den om du har over 999 points
         console.log("Du har købt en stor upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
         level += 50; // plus i level så man få flere points pr click
@@ -55,14 +55,13 @@ function UpgradeTwo(){
 }
 
 function UpgradeThree(){
-    var SpecialPowderPrice = 25000;
     if (num >= SpecialPowderPrice){ // tjek om 25k
         console.log("du har købt den sidste upgrade");
         level += 500 // viser point i click 
         num -= 25000 // fjerner dine points
         upgradeLevel.innerHTML = level; // adder 500 til den del af koden som viser points pr click
         numbers.innerHTML = num; // går at du kan se du har fået fjernet 25k
-        SpecialPowderPrice = SpecialPowderPrice*1,1;
+        SpecialPowderPrice = SpecialPowderPrice*1.1;
         alert("du har nu klaret spillet")
     }
     else {
