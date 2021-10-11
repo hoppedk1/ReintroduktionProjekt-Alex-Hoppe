@@ -1,6 +1,6 @@
 // Det meste er koden er blevet lånt fra https://codepen.io/marisdu/pen/ZJKzRG
 var num = 0; // Ens starter værdi
-var level = 1;
+var level = 1; // Start click værdi
 var cookie = document.getElementById("cookie");
 
 window.onload = function () { // er en del af koden som tvinger en til at skrive noget når spillet loader
@@ -39,7 +39,7 @@ function UpgradeTwo(){
         console.log("Du har købt en stor upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
         level += 50; // plus i level så man få flere points pr click
        num -= 5000; // fjerner 500 fra din points,
-       upgradeLevel.innerHTML = level ; // Denne del i koden viser hvor mange points man får per click
+       upgradeLevel.innerHTML = level; // Denne del i koden viser hvor mange points man får per click, efter at level bliver øget i starten.
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 500
        alert("You have upgraded 50 points") 
     }
@@ -53,7 +53,7 @@ function UpgradeThree(){
         console.log("du har købt den sidste upgrade");
         level += 500 // viser point i click 
         num -= 25000 // fjerner dine points
-        upgradeLevel.innerHTML = level + 500; // adder 500 til den del af koden som viser points pr click
+        upgradeLevel.innerHTML = level; // adder 500 til den del af koden som viser points pr click, efter at level bliver øget i starten.
         numbers.innerHTML = num; // går at du kan se du har fået fjernet 25k
         alert("du har nu klaret spillet")
     }
