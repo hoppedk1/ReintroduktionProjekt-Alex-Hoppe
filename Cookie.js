@@ -21,12 +21,14 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
 }
 
 function Upgrade(){
-    if (num >= 50){// Her tjekker den om du har over 49 points
+    var StrongerClickerPrice = 50;
+    if (num >= StrongerClickerPrice){// Her tjekker den om du har over 49 points
         console.log("Du har købt en upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
        level++; // plus i level så man få flere points pr click
        num -= 50; // fjerner 50 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 50
        upgradeLevel.innerHTML = level + 1; // denne del af koden viser hvor mange points man får pr click
+       StrongerClickerPrice = StrongerClickerPrice*1,1;
        alert("You have upgraded");
     }
     else {
@@ -35,12 +37,14 @@ function Upgrade(){
 }
 
 function UpgradeTwo(){
-    if (num >= 5000){// Her tjekker den om du har over 999 points
+    var BoosterPrice = 5000;
+    if (num >= BoosterPrice){// Her tjekker den om du har over 999 points
         console.log("Du har købt en stor upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
         upgradeLevel.innerHTML = level + 50; // Denne del i koden viser hvor mange points man får per click
         level += 50; // plus i level så man få flere points pr click
        num -= 5000; // fjerner 500 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 500
+       BoosterPrice = BoosterPrice*1,1;
        alert("You have upgraded 50 points") 
     }
     else {
@@ -49,12 +53,14 @@ function UpgradeTwo(){
 }
 
 function UpgradeThree(){
-    if (num >= 25000){ // tjek om 25k
+    var SpecialPowderPrice = 25000;
+    if (num >= SpecialPowderPrice){ // tjek om 25k
         console.log("du har købt den sidste upgrade");
         upgradeLevel.innerHTML = level + 500; // adder 500 til den del af koden som viser points pr click
         level += 500 // viser point i click 
         num -= 25000 // fjerner dine points
         numbers.innerHTML = num; // går at du kan se du har fået fjernet 25k
+        SpecialPowderPrice = SpecialPowderPrice*1,1;
         alert("du har nu klaret spillet")
     }
     else {
