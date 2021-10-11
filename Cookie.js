@@ -2,8 +2,14 @@
 var num = 0; // Ens starter værdi
 var level = 1; // Start click værdi
 var StrongerClickerPrice = 50; //Her sætter vi prisen
+var StrongerClickerClickPower = 1; //Her sætter vi hvor meget den giver per click
+var StrongerClickerAmount = 0; //Her sætter vi en variabel til at tælle antallet af genstanden
 var BoosterPrice = 5000;//Her sætter vi prisen
+var BoosterClickPower = 50; //Her sætter vi hvor meget den giver per click
+var BoosterAmount = 0; //Her sætter vi en variabel til at tælle antallet af genstanden
 var SpecialPowderPrice = 25000;//Her sætter vi prisen
+var SpecialPowderClickPower = 500; //Her sætter vi hvor meget den giver per click
+var SpecialPowderAmount = 0; //Her sætter vi en variabel til at tælle antallet af genstanden
 var cookie = document.getElementById("cookie");
 window.onload = function () { // er en del af koden som tvinger en til at skrive noget når spillet loader
     var name = prompt("What is your name"); // spør om navnet på din buisness
@@ -30,7 +36,10 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
 function Upgrade(){
     if (num >= StrongerClickerPrice){// Her tjekker den om du har over 49 points
         console.log("Du har købt en upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
-       level += 1; // plus i level så man få flere points pr click
+       level += StrongerClickerClickPower; // plus i level så man få flere points pr click
+       if (StrongerClickerAmount === 10){
+        StrongerClickerClickPower*1.1;
+       }
        num -= StrongerClickerPrice; // fjerner 50 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 50
        StrongerClickerPrice = StrongerClickerPrice*1.1; // Her øger vi prisen for hvert køb
@@ -46,7 +55,7 @@ function Upgrade(){
 function UpgradeTwo(){
     if (num >= BoosterPrice){// Her tjekker den om du har over 999 points
         console.log("Du har købt en stor upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
-        level += 50; // plus i level så man få flere points pr click
+        level += BoosterClickPower; // plus i level så man få flere points pr click
        num -= BoosterPrice; // fjerner 500 fra din points,
        upgradeLevel.innerHTML = level ; // Denne del i koden viser hvor mange points man får per click
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 500
@@ -62,7 +71,7 @@ function UpgradeTwo(){
 function UpgradeThree(){
     if (num >= SpecialPowderPrice){ // tjek om 25k
         console.log("du har købt den sidste upgrade");
-        level += 500 // viser point i click 
+        level += SpecialPowderClickPower // viser point i click 
         num -= SpecialPowderPrice // fjerner dine points
         upgradeLevel.innerHTML = level; // adder 500 til den del af koden som viser points pr click
         numbers.innerHTML = num; // går at du kan se du har fået fjernet 25k
