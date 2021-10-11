@@ -1,6 +1,8 @@
 // Det meste er koden er blevet lånt fra https://codepen.io/marisdu/pen/ZJKzRG
 var num = 0; // Ens starter værdi
 var level = 1; // Start click værdi
+var StrongerClickerPrice = 50; //Her sætter vi prisen
+
 var cookie = document.getElementById("cookie");
 
 window.onload = function () { // er en del af koden som tvinger en til at skrive noget når spillet loader
@@ -21,14 +23,13 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
 }
 
 function Upgrade(){
-
-    var StrongerClickerPrice = 50; //Her sætter vi prisen
+debugger
     if (num >= StrongerClickerPrice){// Her tjekker den om du har over 49 points
         console.log("Du har købt en upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
        level += 1; // plus i level så man få flere points pr click
        num -= 50; // fjerner 50 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 50
-       StrongerClickerPrice = StrongerClickerPrice*1,1;
+       StrongerClickerPrice = StrongerClickerPrice*2;
        upgradeLevel.innerHTML = level; // denne del af koden viser hvor mange points man får pr click
        alert("You have upgraded");
     }
@@ -45,7 +46,7 @@ function UpgradeTwo(){
        num -= 5000; // fjerner 500 fra din points,
        upgradeLevel.innerHTML = level ; // Denne del i koden viser hvor mange points man får per click
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 500
-       BoosterPrice = BoosterPrice*1,1;
+       BoosterPrice = BoosterPrice*1.1;
        alert("You have upgraded 50 points") 
     }
     else {
