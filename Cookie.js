@@ -16,12 +16,12 @@ window.onload = function () { // er en del af koden som tvinger en til at skrive
     var Buisness = prompt("What type of buisness are you running?") // spørger om hvilken type buisness det er, ville gerne have billdet ville ændre sig/ standard her ville nok være et bakery.
     var space = document.getElementById("space"); // kalder "space" fra HTML hvor at navnet skal stå
     space.innerHTML = name + "'s" + " " +Buisness; // Ligger combinationen af navne sammen.
-    ClickIncrease1.innerHTML = 1
-    ClickIncrease2.innerHTML = 50   
-    ClickIncrease3.innerHTML = 500
-    LevelIncrease1.innerHTML = StrongerClickerPrice
-    LevelIncrease2.innerHTML = BoosterPrice
-    LevelIncrease3.innerHTML = SpecialPowderPrice
+    ClickIncrease1.innerHTML = StrongerClickerClickPower;
+    ClickIncrease2.innerHTML = BoosterClickPower; 
+    ClickIncrease3.innerHTML = SpecialPowderClickPower;
+    LevelIncrease1.innerHTML = StrongerClickerPrice;
+    LevelIncrease2.innerHTML = BoosterPrice;
+    LevelIncrease3.innerHTML = SpecialPowderPrice;
 }
 
 function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang der bliver trykket på cookien.
