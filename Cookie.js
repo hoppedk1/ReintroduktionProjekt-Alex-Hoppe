@@ -22,7 +22,7 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
 
 function Upgrade(){
 
-    var StrongerClickerPrice = 50;
+    var StrongerClickerPrice = 50; //Her sætter vi prisen
     if (num >= StrongerClickerPrice){// Her tjekker den om du har over 49 points
         console.log("Du har købt en upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
        level += 1; // plus i level så man få flere points pr click
