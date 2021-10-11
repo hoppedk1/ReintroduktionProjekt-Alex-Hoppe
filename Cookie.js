@@ -37,9 +37,8 @@ function Upgrade(){
     if (num >= StrongerClickerPrice){// Her tjekker den om du har over 49 points
         console.log("Du har købt en upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
        level += StrongerClickerClickPower; // plus i level så man få flere points pr click
-       if (StrongerClickerAmount === 10){
-        StrongerClickerClickPower*1.1;
-       }
+       StrongerClickerAmount +=1
+       upgradeclickers(StrongerClickerAmount,StrongerClickerClickPower)
        num -= StrongerClickerPrice; // fjerner 50 fra din points,
        numbers.innerHTML = Math.trunc(num); // ændre selve html delen til at vise du har fået fjernet 50
        StrongerClickerPrice = StrongerClickerPrice*1.1; // Her øger vi prisen for hvert køb
@@ -47,9 +46,12 @@ function Upgrade(){
        LevelIncrease1.innerHTML = Math.trunc(StrongerClickerPrice)
        alert("You have upgraded");
     }
+
     else {
         console.log("Du har ikke nok points")
     }
+    
+
 }
 
 function UpgradeTwo(){
@@ -81,5 +83,12 @@ function UpgradeThree(){
     }
     else {
         console.log("Du har ikke nok points")
+    }
+}
+
+function upgradeclickers(Amount,ClickPower){
+    if (Amount === 2){
+        ClickPower*2
+    return ClickPower
     }
 }
