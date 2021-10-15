@@ -28,7 +28,7 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
     num += level; // Værdien af points man får per click.
     console.log("You Clicked");
 
-   var numbers = document.getElementById("numbers");
+   var numbers = document.getElementById("numbers"); // Kalder positionen i css så numbers bliver kaldt ordenligt.
 
     numbers.innerHTML = num; // Det er denne del som gør at man kan se selve tallet på HTML filen.
 }
