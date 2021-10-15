@@ -38,13 +38,13 @@ function Upgrade(){
         console.log("Du har købt en upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
        level += StrongerClickerClickPower; // plus i level så man få flere points pr click
        if (StrongerClickerAmount === 10){
-        StrongerClickerClickPower*1.1;
+        StrongerClickerClickPower*1.1; 
        }
        num -= StrongerClickerPrice; // fjerner 50 fra din points,
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 50
-       StrongerClickerPrice = StrongerClickerPrice*1.1; // Her øger vi prisen for hvert køb
+       StrongerClickerPrice = StrongerClickerPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
        upgradeLevel.innerHTML = level; // denne del af koden viser hvor mange points man får pr click
-       LevelIncrease1.innerHTML = StrongerClickerPrice
+       LevelIncrease1.innerHTML = StrongerClickerPrice // Her viser den i HTML den NYE pris for at købe StrongerClicker
        alert("You have upgraded");
     }
     else {
@@ -59,8 +59,8 @@ function UpgradeTwo(){
        num -= BoosterPrice; // fjerner 500 fra din points,
        upgradeLevel.innerHTML = level ; // Denne del i koden viser hvor mange points man får per click
        numbers.innerHTML = num; // ændre selve html delen til at vise du har fået fjernet 500
-       BoosterPrice = BoosterPrice*1.1;
-       LevelIncrease2.innerHTML = BoosterPrice
+       BoosterPrice = BoosterPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
+       LevelIncrease2.innerHTML = BoosterPrice // Her viser den i HTML den NYE pris for at købe Booster
        alert("You have upgraded 50 points") 
     }
     else {
@@ -75,8 +75,8 @@ function UpgradeThree(){
         num -= SpecialPowderPrice // fjerner dine points
         upgradeLevel.innerHTML = level; // adder 500 til den del af koden som viser points pr click
         numbers.innerHTML = num; // går at du kan se du har fået fjernet 25k
-        SpecialPowderPrice = SpecialPowderPrice*1.1;
-        LevelIncrease3.innerHTML = SpecialPowderPrice
+        SpecialPowderPrice = SpecialPowderPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
+        LevelIncrease3.innerHTML = SpecialPowderPrice // Her viser den i HTML den NYE pris for at købe Powder
         alert("du har nu klaret spillet")
     }
     else {
