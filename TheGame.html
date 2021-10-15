@@ -18,18 +18,18 @@
         <div id= "upgradeLevel"></div>
         <p>Pris - Upgrades - Clicks</p>
         <div id = "upgrade" onclick="Upgrade()">
-            <img id="upgrade69" src="StrongFinger.png" width="50px"/>
+            <img id="Upgrade1" src="StrongFinger.png" width="50px"/>
         </div>
         <p></p>
          <div id = "UpgradeTwo" onclick="UpgradeTwo()"> 
-            <img src="Booster.png" width="75px"/></div>
+            <img id="Upgrade2" src="Booster.png" width="75px"/></div>
          <div id = "UpgradeThree" onclick="UpgradeThree()">
-            <img src="PowderBag.png" width="75px"/></div>
+            <img id="Upgrade3" src="PowderBag.png" width="75px"/></div>
         <script>
-            function ChangeImage(){
-                var image = document.getElementById('upgrade69');
-            if (StrongerClickerAmount === 2) {
-                image.src = "Booster.png";
+            function ChangeImage(OriginalPicture,NewPicture,UpgradeAmount, UpgradesNeeded){
+                var image = document.getElementById(OriginalPicture);
+            if (UpgradeAmount === UpgradesNeeded) {
+                image.src = NewPicture;
                 }
             }
         </script>

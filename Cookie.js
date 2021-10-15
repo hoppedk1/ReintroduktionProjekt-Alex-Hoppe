@@ -13,9 +13,8 @@ var SpecialPowderAmount = 0; //Her sætter vi en variabel til at tælle antallet
 var cookie = document.getElementById("cookie");
 window.onload = function () { // er en del af koden som tvinger en til at skrive noget når spillet loader
     var name = prompt("What is your name"); // spør om navnet på din buisness
-    var Buisness = prompt("What type of buisness are you running?") // spørger om hvilken type buisness det er, ville gerne have billdet ville ændre sig/ standard her ville nok være et bakery.
     var space = document.getElementById("space"); // kalder "space" fra HTML hvor at navnet skal stå
-    space.innerHTML = name + "'s" + " " +Buisness; // Ligger combinationen af navne sammen.
+    space.innerHTML = name + "'s" + " " +"Bakery"; // Ligger combinationen af navne sammen.
     ClickIncrease1.innerHTML = StrongerClickerClickPower; // Vi viser i HTML mængden af clicks du får pr upgrade når du køber StrongerClicker
     ClickIncrease2.innerHTML = BoosterClickPower;  // Vi viser i HTML mængden af clicks du får pr upgrade når du køber Booster
     ClickIncrease3.innerHTML = SpecialPowderClickPower; // Vi viser i HTML mængden af clicks du får pr upgrade når du køber Powder
@@ -47,7 +46,7 @@ function Upgrade(){
         level+=StrongerClickerClickPower*10;//Her øger vi de upgrades vi har med den dobbelte værdi
         StrongerClickerClickPower*=2;//Her gør vi så fremtide køb af upgraden også er dobbelt så gode
         ClickIncrease1.innerHTML = StrongerClickerClickPower;} // Vi viser i HTML mængden af clicks du får pr upgrade når du køber StrongerClicker
-        ChangeImage();
+        ChangeImage('Upgrade1',"Guldfingeren.png",StrongerClickerAmount,10);
         num -= StrongerClickerPrice; // fjerner 50 fra din points,
        numbers.innerHTML = Math.trunc(num); // ændre selve html delen til at vise du har fået fjernet 50
        StrongerClickerPrice = StrongerClickerPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
@@ -71,7 +70,8 @@ function UpgradeTwo(){
             level+=BoosterClickPower*10;//Her øger vi de upgrades vi har med den dobbelte værdi
             BoosterClickPower*=2;//Her gør vi så fremtide køb af upgraden også er dobbelt så gode
             ClickIncrease2.innerHTML = BoosterClickPower;}  // Vi viser i HTML mængden af clicks du får pr upgrade når du køber Booster
-       num -= BoosterPrice; // fjerner 500 fra din points,
+        ChangeImage('Upgrade2',"BlueBooster.png",BoosterAmount,10);
+        num -= BoosterPrice; // fjerner 500 fra din points,
        upgradeLevel.innerHTML = level ; // Denne del i koden viser hvor mange points man får per click
        numbers.innerHTML = Math.trunc(num); // ændre selve html delen til at vise du har fået fjernet 500
        BoosterPrice = BoosterPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
@@ -93,6 +93,7 @@ function UpgradeThree(){
             level+=SpecialPowderClickPower*10;//Her øger vi de upgrades vi har med den dobbelte værdi
             SpecialPowderClickPower*=2; //Her gør vi så fremtide køb af upgraden også er dobbelt så gode
             ClickIncrease3.innerHTML = SpecialPowderClickPower;} // Vi viser i HTML mængden af clicks du får pr upgrade når du køber Powder
+        ChangeImage('Upgrade3',"PowderPack.png",SpecialPowderAmount,10);
         num -= SpecialPowderPrice // fjerner dine points
         upgradeLevel.innerHTML = level; // adder 500 til den del af koden som viser points pr click
         numbers.innerHTML = Math.trunc(num); // går at du kan se du har fået fjernet 25k
@@ -105,3 +106,4 @@ function UpgradeThree(){
         console.log("Du har ikke nok points")
     }
 }
+
