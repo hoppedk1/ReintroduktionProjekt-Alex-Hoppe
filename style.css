@@ -29,13 +29,13 @@ p {
 }
 
 table {
-    margin-top: -500px;
+    margin-top: -600px;
     border: 2px solid;
     border-radius: 5px;
     position: fixed;
     left: 150px;
-    width: 400px;
-    height: 120px;
+    width: 270px;
+    height: 160px;
 }
 
 td {
@@ -151,4 +151,46 @@ td {
     height:25px; 
     position: fixed;
     left: 1025px;
+}
+#AmountIncrease1{
+    margin-top: -597px;
+    text-align:center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    border:5px solid;
+    border-radius:10px;
+    background-color:lightpink;
+    width:85px;
+    height:25px; 
+    position: fixed;
+    left: 400px;
+}
+#AmountIncrease2{
+    margin-top: -547px;
+    text-align:center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    border:5px solid;
+    border-radius:10px;
+    background-color:lightpink;
+    width:85px;
+    height:25px; 
+    position: fixed;
+    left: 400px;
+}
+#AmountIncrease3{
+    margin-top: -497px;
+    text-align:center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    border:5px solid;
+    border-radius:10px;
+    background-color:lightpink;
+    width:85px;
+    height:25px; 
+    position: fixed;
+    left: 400px;
 }

@@ -23,7 +23,9 @@ window.onload = function () { // er en del af koden som tvinger en til at skrive
     LevelIncrease2.innerHTML = BoosterPrice; // Vi viser i HTML prisen for at købe den anden upgrade
     LevelIncrease3.innerHTML = SpecialPowderPrice; // Vi viser i HTML prisen for at købe den tredje upgrade
     upgradeLevel.innerHTML = level; // denne del af koden viser hvor mange points man får pr click
-
+    AmountIncrease1.innerHTML = StrongerClickerAmount; // viser i HTML hvor mange af Stronger Clickers du har købt
+    AmountIncrease2.innerHTML = BoosterAmount; // Viser i HTMl hvor mange Boostere du har købt
+    AmountIncrease3.innerHTML = SpecialPowderAmount; // Viser i HTML mængden af "Special" Powder du har købt
 }
 
 function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang der bliver trykket på cookien.
@@ -52,6 +54,7 @@ function Upgrade(){
        upgradeLevel.innerHTML = level; // denne del af koden viser hvor mange points man får pr click
        LevelIncrease1.innerHTML = Math.trunc(StrongerClickerPrice) // Her viser den i HTML den NYE pris for at købe StrongerClicker
         StrongerClickerClickPower*1.1; 
+        AmountIncrease1.innerHTML = StrongerClickerAmount;
         alert("You have upgraded");
        }  
     else {
@@ -73,6 +76,7 @@ function UpgradeTwo(){
        numbers.innerHTML = Math.trunc(num); // ændre selve html delen til at vise du har fået fjernet 500
        BoosterPrice = BoosterPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
        LevelIncrease2.innerHTML = Math.trunc(BoosterPrice) // Her viser den i HTML den NYE pris for at købe Booster
+       AmountIncrease2.innerHTML = BoosterAmount;
        alert("You have upgraded 50 points") 
     }
     else {
@@ -94,6 +98,7 @@ function UpgradeThree(){
         numbers.innerHTML = Math.trunc(num); // går at du kan se du har fået fjernet 25k
         SpecialPowderPrice = SpecialPowderPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
         LevelIncrease3.innerHTML = Math.trunc(SpecialPowderPrice) // Her viser den i HTML den NYE pris for at købe Powder
+        AmountIncrease3.innerHTML = SpecialPowderAmount;
         alert("du har nu klaret spillet")
     }
     else {
