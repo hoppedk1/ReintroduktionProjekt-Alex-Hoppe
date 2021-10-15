@@ -26,10 +26,10 @@
          <div id = "UpgradeThree" onclick="UpgradeThree()">
             <img id="Upgrade3" src="PowderBag.png" width="75px"/></div>
         <script>
-            function ChangeImage(OriginalPicture,NewPicture,UpgradeAmount, UpgradesNeeded){
-                var image = document.getElementById(OriginalPicture);
-            if (UpgradeAmount === UpgradesNeeded) {
-                image.src = NewPicture;
+            function ChangeImage(OriginalPicture,NewPicture,UpgradeAmount, UpgradesNeeded){// Her har vi en funktion der fanger billedets id og ændrer det til et nyt når man har nok af upgraden
+                var image = document.getElementById(OriginalPicture);//Her fanger vi det billed vi starter med
+            if (UpgradeAmount === UpgradesNeeded) {// Her tjekker vi for om man har nok upgrades
+                image.src = NewPicture;// Her ændrer vi billedet til det nye
                 }
             }
         </script>
