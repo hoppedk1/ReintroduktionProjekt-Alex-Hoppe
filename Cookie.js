@@ -30,7 +30,7 @@ function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang 
     num += level; // Værdien af points man får per click.
     console.log("You Clicked");
 
-   var numbers = document.getElementById("numbers");
+   var numbers = document.getElementById("numbers"); // Kalder positionen i css så numbers bliver kaldt ordenligt.
 
     numbers.innerHTML = Math.trunc(num); // Det er denne del som gør at man kan se selve tallet på HTML filen.
 }
@@ -46,11 +46,12 @@ function Upgrade(){
         StrongerClickerClickPower*=2;}
        num -= StrongerClickerPrice; // fjerner 50 fra din points,
        numbers.innerHTML = Math.trunc(num); // ændre selve html delen til at vise du har fået fjernet 50
-       StrongerClickerPrice = StrongerClickerPrice*1.1; // Her øger vi prisen for hvert køb
+       StrongerClickerPrice = StrongerClickerPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
        upgradeLevel.innerHTML = level; // denne del af koden viser hvor mange points man får pr click
-       LevelIncrease1.innerHTML = Math.trunc(StrongerClickerPrice)
-       alert("You have upgraded");
-    }
+       LevelIncrease1.innerHTML = Math.trunc(StrongerClickerPrice) // Her viser den i HTML den NYE pris for at købe StrongerClicker
+        StrongerClickerClickPower*1.1; 
+        alert("You have upgraded");
+       }  
     else {
         console.log("Du har ikke nok points")
     }
@@ -66,8 +67,8 @@ function UpgradeTwo(){
        num -= BoosterPrice; // fjerner 500 fra din points,
        upgradeLevel.innerHTML = level ; // Denne del i koden viser hvor mange points man får per click
        numbers.innerHTML = Math.trunc(num); // ændre selve html delen til at vise du har fået fjernet 500
-       BoosterPrice = BoosterPrice*1.1;
-       LevelIncrease2.innerHTML = Math.trunc(BoosterPrice)
+       BoosterPrice = BoosterPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
+       LevelIncrease2.innerHTML = Math.trunc(BoosterPrice) // Her viser den i HTML den NYE pris for at købe Booster
        alert("You have upgraded 50 points") 
     }
     else {
@@ -85,8 +86,8 @@ function UpgradeThree(){
         num -= SpecialPowderPrice // fjerner dine points
         upgradeLevel.innerHTML = level; // adder 500 til den del af koden som viser points pr click
         numbers.innerHTML = Math.trunc(num); // går at du kan se du har fået fjernet 25k
-        SpecialPowderPrice = SpecialPowderPrice*1.1;
-        LevelIncrease3.innerHTML = Math.trunc(SpecialPowderPrice)
+        SpecialPowderPrice = SpecialPowderPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
+        LevelIncrease3.innerHTML = Math.trunc(SpecialPowderPrice) // Her viser den i HTML den NYE pris for at købe Powder
         alert("du har nu klaret spillet")
     }
     else {
