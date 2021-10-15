@@ -40,13 +40,13 @@ function Upgrade(){
     if (num >= StrongerClickerPrice){// Her tjekker den om du har over 49 points
         console.log("Du har købt en upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
        level += StrongerClickerClickPower; // plus i level så man få flere points pr click
-       StrongerClickerAmount++
-       if (StrongerClickerAmount === 10){
-        level+=StrongerClickerClickPower*10;
-        StrongerClickerClickPower*=2;
-        ClickIncrease1.innerHTML = StrongerClickerClickPower; // Vi viser i HTML mængden af clicks du får pr upgrade når du køber StrongerClicker
-        }
-       num -= StrongerClickerPrice; // fjerner 50 fra din points,
+       StrongerClickerAmount++ //Her fortæller vi den at den skal øge mængden den har af denne upgrade
+       if (StrongerClickerAmount === 10){//Her tjekker vi om vi har 10 af en upgrade
+        level+=StrongerClickerClickPower*10;//Her øger vi de upgrades vi har med den dobbelte værdi
+        StrongerClickerClickPower*=2;//Her gør vi så fremtide køb af upgraden også er dobbelt så gode
+        ClickIncrease1.innerHTML = StrongerClickerClickPower;} // Vi viser i HTML mængden af clicks du får pr upgrade når du køber StrongerClicker
+        ChangeImage();
+        num -= StrongerClickerPrice; // fjerner 50 fra din points,
        numbers.innerHTML = Math.trunc(num); // ændre selve html delen til at vise du har fået fjernet 50
        StrongerClickerPrice = StrongerClickerPrice*1.1; // Ganger prisen med 1.1, så det bliver dyrer og dyrer
        upgradeLevel.innerHTML = level; // denne del af koden viser hvor mange points man får pr click
@@ -63,12 +63,11 @@ function UpgradeTwo(){
     if (num >= BoosterPrice){// Her tjekker den om du har over 999 points
         console.log("Du har købt en stor upgrade"); // besked at du har købt en upgrade måske lav den om til at være en promt
         level += BoosterClickPower; // plus i level så man få flere points pr click
-        BoosterAmount++
-        if (BoosterAmount === 10){
-            level+=BoosterClickPower*10;
-            BoosterClickPower*=2;
-            ClickIncrease2.innerHTML = BoosterClickPower;  // Vi viser i HTML mængden af clicks du får pr upgrade når du køber Booster
-        }
+        BoosterAmount++//Her fortæller vi den at den skal øge mængden den har af denne upgrade
+        if (BoosterAmount === 10){//Her tjekker vi om vi har 10 af en upgrade
+            level+=BoosterClickPower*10;//Her øger vi de upgrades vi har med den dobbelte værdi
+            BoosterClickPower*=2;//Her gør vi så fremtide køb af upgraden også er dobbelt så gode
+            ClickIncrease2.innerHTML = BoosterClickPower;}  // Vi viser i HTML mængden af clicks du får pr upgrade når du køber Booster
        num -= BoosterPrice; // fjerner 500 fra din points,
        upgradeLevel.innerHTML = level ; // Denne del i koden viser hvor mange points man får per click
        numbers.innerHTML = Math.trunc(num); // ændre selve html delen til at vise du har fået fjernet 500
@@ -85,12 +84,11 @@ function UpgradeThree(){
     if (num >= SpecialPowderPrice){ // tjek om 25k
         console.log("du har købt den sidste upgrade");
         level += SpecialPowderClickPower // viser point i click 
-        SpecialPowderAmount++
-        if (SpecialPowderAmount === 10){
-            level+=SpecialPowderClickPower*10;
-            SpecialPowderClickPower*=2;
-            ClickIncrease3.innerHTML = SpecialPowderClickPower; // Vi viser i HTML mængden af clicks du får pr upgrade når du køber Powder
-        }
+        SpecialPowderAmount++//Her fortæller vi den at den skal øge mængden den har af denne upgrade
+        if (SpecialPowderAmount === 10){ //Her tjekker vi om vi har 10 af en upgrade
+            level+=SpecialPowderClickPower*10;//Her øger vi de upgrades vi har med den dobbelte værdi
+            SpecialPowderClickPower*=2; //Her gør vi så fremtide køb af upgraden også er dobbelt så gode
+            ClickIncrease3.innerHTML = SpecialPowderClickPower;} // Vi viser i HTML mængden af clicks du får pr upgrade når du køber Powder
         num -= SpecialPowderPrice // fjerner dine points
         upgradeLevel.innerHTML = level; // adder 500 til den del af koden som viser points pr click
         numbers.innerHTML = Math.trunc(num); // går at du kan se du har fået fjernet 25k
