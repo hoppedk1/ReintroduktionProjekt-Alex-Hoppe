@@ -1,5 +1,5 @@
 // Det meste er koden er blevet lånt fra https://codepen.io/marisdu/pen/ZJKzRG
-var num = 5000000; // Ens starter værdi
+var num = 0; // Ens starter værdi
 var level = 1; // Start click værdi
 var StrongerClickerPrice = 50; //Her sætter vi prisen
 var StrongerClickerClickPower = 1; //Her sætter vi hvor meget den giver per click
