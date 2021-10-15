@@ -23,9 +23,9 @@ window.onload = function () { // er en del af koden som tvinger en til at skrive
     LevelIncrease2.innerHTML = BoosterPrice; // Vi viser i HTML prisen for at købe den anden upgrade
     LevelIncrease3.innerHTML = SpecialPowderPrice; // Vi viser i HTML prisen for at købe den tredje upgrade
     upgradeLevel.innerHTML = level; // denne del af koden viser hvor mange points man får pr click
-    AmountIncrease1.innerHTML = StrongerClickerAmount;
-    AmountIncrease2.innerHTML = BoosterAmount;
-    AmountIncrease3.innerHTML = SpecialPowderAmount;
+    AmountIncrease1.innerHTML = StrongerClickerAmount; // viser i HTML hvor mange af Stronger Clickers du har købt
+    AmountIncrease2.innerHTML = BoosterAmount; // Viser i HTMl hvor mange Boostere du har købt
+    AmountIncrease3.innerHTML = SpecialPowderAmount; // Viser i HTML mængden af "Special" Powder du har købt
 }
 
 function cookieClick(){ // her er coden/funktionen som skal afspilles hver gang der bliver trykket på cookien.
